@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button {
+  @apply bg-purple-600 text-white px-4 py-2 w-full rounded-md outline-none active:border-2 focus-visible:border-stone-200;
+}
+
+#root {
+  background-image: url("https://images.pexels.com/photos/18670483/pexels-photo-18670483/free-photo-of-dramatic-sky-over-wan-chai-district-on-the-northern-shore-of-hong-kong-island.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+  background-size: cover;
+}
