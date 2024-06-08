@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* background-color: #8decb4; */
+  background-color: antiquewhite;
+  background-position: center;
+  background-size: cover;
+  /* backdrop-filter: blur(100px */
+}
+
+#root {
+  /* background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/ed266b172491563.64809cfa9e014.jpg); */
+  /* background-color: whitesmoke; */
+  background-position: center;
+  background-size: cover;
+}
