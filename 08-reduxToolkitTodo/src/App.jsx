@@ -5,7 +5,7 @@ import Todos from './components/Todos';
 function App() {
 
   return (
-    <div>
+    <div className='w-full flex flex-col items-center' >
       <AddTodo />
       <Todos />
     </div>

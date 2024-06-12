@@ -4,7 +4,8 @@ const initialState = {
   todos: [{
     id: 1,
     text: "No todos yet"
-  }]
+  }],
+  text: ""
 }
 
 const todoSlice = createSlice({
@@ -12,7 +13,7 @@ const todoSlice = createSlice({
   initialState,
   reducers: {
     addTodo: (state, action) => {
-      const text = action.payload.text;
+      const text = action.payload;
       state.todos.push({
         id: nanoid(),
         text,
@@ -20,12 +21,12 @@ const todoSlice = createSlice({
     },
 
     removeTodo: (state, action) => {
-      state.todos = state.todos.filter(todo => id != action.payload);
+      state.todos = state.todos.filter(todo => todo.id != action.payload);
     },
 
     updateTodo: (state, action) => {
       state.todos = state.todos.map(todo => {
-        if (todo.id == action.payload) {
+        if (todo.id == action.payload.id) {
           return { ...todo, text: action.payload.text }
         }
         return todo;
@@ -34,5 +35,5 @@ const todoSlice = createSlice({
   }
 })
 
-export const { addTodo, removeTodo } = todoSlice.actions;
+export const { addTodo, removeTodo, updateTodo } = todoSlice.actions;
 export default todoSlice.reducer;
