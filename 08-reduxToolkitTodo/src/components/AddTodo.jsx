@@ -8,9 +8,9 @@ function AddTodo() {
   const text = useSelector(state => state.input.text);
 
   return (
-    <div className="todo w-1/3 flex justify-center " >
+    <div className="todo w-1/3 px-2 flex " >
       <form
-        className="flex justify-around items-center gap-10"
+        className="flex w-full justify-around items-center gap-10"
         onSubmit={(e) => {
           e.preventDefault();
           dispatch(addTodo(text));
@@ -18,7 +18,7 @@ function AddTodo() {
         }}  >
 
         <input
-          className="text-black px-3 py-2 rounded-md focus:outline-none "
+          className="text-black flex-grow px-3 py-2 rounded-md focus:outline-none "
           onChange={(e) => dispatch(changeText(e.target.value))}
           value={text}
           type="text" name="text" id="text"

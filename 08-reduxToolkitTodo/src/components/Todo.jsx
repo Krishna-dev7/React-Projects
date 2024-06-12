@@ -15,6 +15,7 @@ function Todo({ todo }) {
   return (
     <div className="Todo mt-3 w-full text-lg flex gap-5 justify-between bg-white text-black rounded-md px-10 py-3  items-center ">
       <input
+        className="focus:outline-none"
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
