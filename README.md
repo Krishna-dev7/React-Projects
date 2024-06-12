@@ -64,3 +64,20 @@ deleting one todo
 
 
 ![image](https://github.com/Krishna-dev7/React-Projects/assets/148896798/371ec257-6379-4f18-a6ea-8deb2c9f7b8f)
+
+
+
+## 08 - Classic Todo App Using Redux-Tookit
+
+It is classic todo app built with redux-toolkit and local-storage. I learn basics of redux-toolkit, and to store 
+the data i have used the localStorage
+
+
+![image](https://github.com/Krishna-dev7/React-Projects/assets/148896798/845c5109-8554-4dad-bc3b-4f3b5f58fc9d)
+
+![image](https://github.com/Krishna-dev7/React-Projects/assets/148896798/4779ba70-371b-4040-9bde-6d3871ef5a75)
+
+![image](https://github.com/Krishna-dev7/React-Projects/assets/148896798/0e4da1b5-a538-437e-9866-5b15ee7818ca)
+
+
+
