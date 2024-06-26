@@ -15,8 +15,12 @@ export class AuthService {
   // sign up feature
   async createAccount({ email, password, name }) {
     try {
-      const userAccount = await this.account
-        .create(ID.unique(), email, password, name);
+      const userAccount = await this.account.create(
+        ID.unique(),
+        email,
+        password,
+        name
+      );
       if (userAccount) {
         // then log in the user
         return await this.login({ email, password });
