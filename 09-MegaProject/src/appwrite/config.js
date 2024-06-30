@@ -50,6 +50,7 @@ export class Service {
       );
     } catch (error) {
       console.log("update post error :: " + error.message);
+      return false;
     }
   }
 
@@ -95,6 +96,7 @@ export class Service {
   }
 
   // * file upload related services
+  // here file is our image
 
   async uploadFile(file) {
     try {

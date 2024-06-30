@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { Input, Button } from "./index";
 
 function Login() {
-  const [register, handleSubmit] = useForm();
+  const {register, handleSubmit} = useForm();
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -49,7 +49,7 @@ function Login() {
             name= "email"
             placeholder= "Enter your email"
             { ...register("email", {
-              require: true,
+              required: true,
               validate: {
                 matchPattern: value =>  /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
                 " Email address must be a valid address "
@@ -62,7 +62,7 @@ function Login() {
             label = "Password: "
             placeholder = "Enter your password"
             { ...register("password", {
-              require: true
+              required: true
             }) }
           />
            
