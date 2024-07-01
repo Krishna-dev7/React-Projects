@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState, useEffect, useCallback } from "react";
-import { Input, Button, Logo, RTE } from "../components";
+import { Input, Button, Logo, RTE, Select } from "../components";
 
 function PostForm({post}) {
   
@@ -84,9 +84,44 @@ function PostForm({post}) {
         onChnage = { (e) => {
           setValue("slug", e.target.value, { shouldValidate: true });
         } } />
+
+        <RTE 
+          label="content" title="content"
+          control={control}
+          defaultValue= { getValues("content") }  />
       </div>
 
-      
+      <div className="" >
+        <Input
+        type="file"
+        label="featuredImage"
+        accept = "image/png, image/jpg, image/jpeg, image/gif" />
+        { ...register("image", {
+          required: !post
+        }) }
+      </div>
+
+      { post && (
+        <div>
+          <img 
+            src= { appwriteService.getFilePreview(post.featuredImage) }
+            alt={post.title} 
+            className="rounded-lg"/>
+        </div>
+      ) }
+
+      <Select
+        options= { ["active", "inactive"] }
+        label="status"
+        className="mb-4"
+       />
+
+      <Button
+        type="submit"
+        className= { post ? "bg-green-500" : "" } >
+        { post ? "update" : "submit" }
+      </Button>
+
     </form>
   )
 
